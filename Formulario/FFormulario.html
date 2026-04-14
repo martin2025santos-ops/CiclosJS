@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="Festilo.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="titulo">Formulario de contacto</h1>
+    </header>
+
+    <main>
+
+        <form onsubmit="redirigir(); return false;">
+
+        <form action="URL-que-recibe-datos" method="POST">
+
+            <label for="nombrecompleto">Nombre Completo:</label>
+            <input type="text" id="nombrecompleto" name="nombrecompleto">
+            <br><br>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" name="correo">
+            <br><br>
+
+            <label for="clave">Contraseña:</label>
+            <input type="password" id="clave" name="clave">
+            <br><br>
+
+            <label for="edad">Edad: <br></label>
+            <input type="number" id="edad" name="edad" min="0" max="120">
+            <br><br>
+
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+            <br><br>
+
+            <p>Género:</p>
+            <input type="radio" id="generoH" name="Genero" value="H">
+            <label for="generoH">Hombre</label> 
+            <br><br>
+
+            <input type="radio" id="generoM" name="Genero" value="M">
+            <label for="generoM">Mujer</label>
+            <br><br>
+            
+            <input type="radio" id="generoO" name="Genero" value="O">
+            <label for="generoO">Otro</label>
+            <br><br>
+            
+            <p>Intereses:</p>
+            <input type="checkbox" id="Musica" name="Intereses" value="Musica">
+            <label for="Musica">Musica</label>
+            <br><br>
+
+            <input type="checkbox" id="Deporte" name="Intereses" value="Deporte">
+            <label for="Deporte">Deporte</label>
+            <br><br>
+
+            <input type="checkbox" id="Arte" name="Intereses" value="Arte">
+            <label for="Arte">Arte</label>
+            <br><br>
+
+            <label for="pais">País:</label>
+            <select id="pais" name="pais">
+                <option value="uy">Uruguay</option>
+                <option value="ar">Argentina</option>
+                <option value="br">Brasil</option>
+            </select>
+            <br><br>
+
+            <label for="comentario">Dejanos tu opinión:</label><br>
+            <textarea id="comentario" name="comentario" rows="5" cols="40" placeholder="Escribí tu opinión..."></textarea>
+            <br><br>
+
+            <input class="button" type="submit" value="Enviar Formulario" />
+        </form>
+    </main>
+
+    <script>
+        function redirigir() {
+            window.location.href = "pagina2.html";
+        }
+    </script>
+</body>
+</html>
